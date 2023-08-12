@@ -1,8 +1,26 @@
 import iconForm from '../../assets/images/icon_form.png'
 import captcha from '../../assets/images/captcha.png'
 import adorno from '../../assets/images/adorno_form.svg'
+import { useState } from 'react'
 
 const Form = () => {
+
+  const [name, setName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState(false)
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if([name, lastName, email, phone].includes('')){
+      setError(true);
+      console.log('no envia')
+      return;
+    }
+    console.log('envia')
+  }
+  
   return (
     <div className="bg-white rounded-[32px] max-w-[640px] relative pt-[24px] pl-[34px] pb-[16px] pr-[48px] mt-[40px]">
       <img src={iconForm} alt="" className='absolute -top-[40px] right-0'/>
@@ -11,25 +29,45 @@ const Form = () => {
         <img src={adorno} alt="" />
       </h5>
       
-      <form action="">
+      <form onSubmit={onSubmit}>
         <div className='sm:flex mb-[13px]'>
           <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
             <label htmlFor="" className='form-label'>Nombres <span className='text-red'>*</span></label>
-            <input type="text" className='form-text focus:border-focus' placeholder="Ingrese sus nombres"/>
+            <input
+              type="text"
+              className='form-text text-link focus:border-focus'
+              placeholder="Ingrese sus nombres"
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className='md:ml-3 flex-1'>
             <label htmlFor="" className='form-label'>Apellidos <span className='text-red'>*</span></label>
-            <input type="text" className='form-text focus:border-focus' placeholder="Ingrese sus apellidos"/>
+            <input
+              type="text"
+              className='form-text text-link focus:border-focus'
+              placeholder="Ingrese sus apellidos"
+              onChange={(e) => setLastName(e.target.value)}
+            />
           </div>
         </div>
         <div className='sm:flex mb-[13px]'>
           <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
             <label htmlFor="" className='form-label'>Teléfono celular <span className='text-red'>*</span></label>
-            <input type="text" className='form-text focus:border-focus' placeholder="Ingrese su número telefonico"/>
+            <input
+              type="text"
+              className='form-text text-link focus:border-focus'
+              placeholder="Ingrese su número telefonico"
+              onChange={(e) => setPhone(e.target.value)}
+            />
           </div>
           <div className='md:ml-3 flex-1'>
             <label htmlFor="" className='form-label'>Correo electrónico <span className='text-red'>*</span></label>
-            <input type="text" className='form-text focus:border-focus' placeholder="Ingrese su correo electrónico"/>
+            <input
+              type="text"
+              className='form-text text-link focus:border-focus'
+              placeholder="Ingrese su correo electrónico"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
         </div>
         <div className='sm:flex mb-[13px]'>
