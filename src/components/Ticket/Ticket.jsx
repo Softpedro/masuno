@@ -1,10 +1,14 @@
 import percentaje from '../../assets/images/image_percentaje.png'
+import adorno from '../../assets/images/adorno_discount2.png'
 
 const Ticket = () => {
   return (
     <div className="bg-white max-w-[550px] px-[13px] py-[13px] mt-[44px]">
       <div className="border-dashed border-2 border-[#003383] px-[20px] py-[15px] rounded-2xl">
-        <h4 className="text-center text-pink text-[32px] font-semibold">Regístrate y obtén</h4>
+        <h4 className="text-center text-pink text-[32px] font-semibold">
+          Regístrate y obtén
+          <img src={adorno} alt=""  className='block m-auto'/>
+        </h4>
         <div className='flex items-center'>
           <img src={percentaje} alt="" />
           <div>

@@ -1,11 +1,16 @@
 import iconForm from '../../assets/images/icon_form.png'
 import captcha from '../../assets/images/captcha.png'
+import adorno from '../../assets/images/adorno_form.svg'
 
 const Form = () => {
   return (
     <div className="bg-white rounded-[32px] max-w-[640px] relative pt-[24px] pl-[34px] pb-[16px] pr-[48px] mt-[40px]">
       <img src={iconForm} alt="" className='absolute -top-[40px] right-0'/>
-      <h5 className='text-2xl text-red font-extrabold mb-[35px]'>Completa tus datos</h5>
+      <h5 className='text-2xl text-red font-extrabold mb-[35px]'>
+        Completa tus datos
+        <img src={adorno} alt="" />
+      </h5>
+      
       <form action="">
         <div className='flex mb-[13px]'>
           <div className='mr-3 flex-1'>
