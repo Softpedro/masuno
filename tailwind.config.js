@@ -21,6 +21,7 @@ export default {
       },
       backgroundColor: {
         'blue': '#003383',
+        'blueDark': '#1A36A8'
       },
     },
   },

@@ -33,7 +33,7 @@ const Steps = () => {
       <Container>
         <Separation/>
         <Title content={'¿Como obtengo el descuento por Cyber Days?'}/>
-        <p className="mt-6 text-center text-2xl text-gray">
+        <p className="mt-2 text-center text-2xl text-gray">
           Para adquirir nuestro descuento especial por
           <span className="text-red font-extrabold">&nbsp;Cyber Days&nbsp;</span>
           sigue los siguientes pasos
