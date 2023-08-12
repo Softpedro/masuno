@@ -12,28 +12,28 @@ const Form = () => {
       </h5>
       
       <form action="">
-        <div className='flex mb-[13px]'>
-          <div className='mr-3 flex-1'>
+        <div className='sm:flex mb-[13px]'>
+          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
             <label htmlFor="" className='form-label'>Nombres <span className='text-red'>*</span></label>
             <input type="text" className='form-text focus:border-focus' placeholder="Ingrese sus nombres"/>
           </div>
-          <div className='ml-3 flex-1'>
+          <div className='md:ml-3 flex-1'>
             <label htmlFor="" className='form-label'>Apellidos <span className='text-red'>*</span></label>
             <input type="text" className='form-text focus:border-focus' placeholder="Ingrese sus apellidos"/>
           </div>
         </div>
-        <div className='flex mb-[13px]'>
-          <div className='mr-3 flex-1'>
+        <div className='sm:flex mb-[13px]'>
+          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
             <label htmlFor="" className='form-label'>Teléfono celular <span className='text-red'>*</span></label>
             <input type="text" className='form-text focus:border-focus' placeholder="Ingrese su número telefonico"/>
           </div>
-          <div className='ml-3 flex-1'>
+          <div className='md:ml-3 flex-1'>
             <label htmlFor="" className='form-label'>Correo electrónico <span className='text-red'>*</span></label>
             <input type="text" className='form-text focus:border-focus' placeholder="Ingrese su correo electrónico"/>
           </div>
         </div>
-        <div className='flex mb-[13px]'>
-          <div className='mr-3 flex-1'>
+        <div className='sm:flex mb-[13px]'>
+          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
             <label htmlFor="" className='form-label'>Tus favoritos</label>
             <select name="" id="" className='form-select'>
               <option value="">Pollo, Cerdo, Embutidos...</option>
@@ -42,7 +42,7 @@ const Form = () => {
               <option value="">Pollo, Cerdo, Embutidos...</option>
             </select>
           </div>
-          <div className='ml-3 flex-1'>
+          <div className='md:ml-3 flex-1'>
             <img src={captcha} alt="" />
             <input type="text" className='form-text focus:border-focus' placeholder="Ingrese captcha"/>
           </div>

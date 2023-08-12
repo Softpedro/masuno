@@ -38,7 +38,7 @@ const Steps = () => {
           <span className="text-red font-extrabold">&nbsp;Cyber Days&nbsp;</span>
           sigue los siguientes pasos
         </p>
-        <div className="flex mt-[50px]">
+        <div className="md:flex md:flex-row mt-[50px] flex flex-col">
           {data.map((item, index) => {
             const { image, title, categoria, description } = item
             return <Step title={title} image={image} categoria={categoria} description={description} key={index}/>

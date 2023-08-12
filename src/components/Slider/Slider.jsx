@@ -37,13 +37,13 @@ const Slider = () => {
       <Swiper className="mySwiper" navigation={true} modules={[Navigation]}>
         {data.map(( item, index ) => (
           <SwiperSlide key={index}>
-            <div className="relative min-h-[590px] flex items-center">
-              <div className="absolute w-1/2 h-full top-0 right-0">
+            <div className="relative md:min-h-[590px] md:flex items-center py-10 px-10">
+              <div className="md:absolute w-1/2 h-full top-0 right-0 relative">
                 <img src={item.image} className="absolute inset-0 w-full h-full object-cover object-center" alt="" />
               </div>
               <Container>
                 <div className="flex w-full  h-full">
-                  <div className="w-1/2 pl-[90px]">
+                  <div className="md:w-1/2 md:pl-[90px] w-full">
                     <img src={iconStars} className="mb-5" alt="" />
                     <h5 className="text-red font-extrabold text-[32px]">{item.title}</h5>
                     <p className="max-w-[490px] text-[18px]">{item.description}</p>

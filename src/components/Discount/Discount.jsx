@@ -4,7 +4,7 @@ import adorno from '../../assets/images/adorno_discount1.svg'
 
 const Discount = () => {
   return (
-    <div>
+    <div className='flex flex-col items-center mb-[80px] lg:block'>
       <div className='flex items-center mb-3.5'>
         <img src={iconDiscount} alt="" />
         <p className='text-white ml-4 uppercase text-2xl'>Es hora de</p>

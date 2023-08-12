@@ -7,9 +7,13 @@ const Banner = () => {
   return (
     <Wrapper bg={'#1A36A8'}>
       <Container>
-        <div className='flex justify-between items-start pt-[55px] pb-[64px]'>
-          <Discount />
-          <Form />
+        <div className='justify-between items-start pt-[55px] pb-[64px] lg:flex block'>
+          <div className='flex-1 mr-2'>
+            <Discount />
+          </div>
+          <div className='flex-1 ml-2'>
+            <Form />
+          </div>
         </div>
       </Container>
     </Wrapper>

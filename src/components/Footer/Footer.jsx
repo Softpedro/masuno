@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <Wrapper bg={"#1A36A8"}>
       <Container>
-        <div className="flex justify-between px-[100px] pt-[70px] pb-[90px]">
-          <div>
+        <div className="md:flex justify-between md:px-[100px] pt-[70px] pb-[90px]">
+          <div className="md:m-0 mb-10">
             <img src={logo} alt="" className="mb-[35px]"/>
             <strong className="text-[20px] text-white">Nosotros</strong>
             <p className="text-white">Somos Mas uno</p>
           </div>
-          <div>
+          <div className="md:m-0 mb-10">
             <strong className="text-[20px] text-white mb-5 block">Te informamos</strong>
             <ul>
               <li className="text-white text-[14px] mb-2">Preguntas frecuentes</li>

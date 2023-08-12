@@ -3,7 +3,7 @@ import adorno from '../../assets/images/adorno_discount2.png'
 
 const Ticket = () => {
   return (
-    <div className="bg-white max-w-[550px] px-[13px] py-[13px] mt-[44px]">
+    <div className="bg-white max-w-[550px] px-[13px] py-[13px] mt-[44px] m-auto">
       <div className="border-dashed border-2 border-[#003383] px-[20px] py-[15px] rounded-2xl">
         <h4 className="text-center text-pink text-[32px] font-semibold">
           Regístrate y obtén
