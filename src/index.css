@@ -1,15 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
 
 @layer base {
   body{
-    font-family: "arboria", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+  }
+  input, select{
+    outline: none;
   }
 }
 
 @layer components {
-  
+  .form-label{
+    @apply text-label mb-1;
+  }
+  .form-text{
+    @apply px-2 py-1 block border-solid border border-input rounded-md w-full;
+  }
+  .form-select{
+    @apply px-2 py-2 bg-transparent w-full block border-solid border border-input rounded-md text-label;
+  }
+  .form-button{
+    @apply w-[240px] h-[56px] flex items-center justify-center bg-blue text-white rounded-md mx-auto
+  }
 }
