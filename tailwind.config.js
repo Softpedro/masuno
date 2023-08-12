@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'coini-purple': '#5345EB',
+        'white': '#ffffff',
       },
       borderColor: {
         'input': '#DADADA',
       },
       backgroundColor: {
-        'input-otp': '#292929',
+        'blue': '#003383',
       }
     },
   },
