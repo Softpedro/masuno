@@ -25,6 +25,9 @@
     @apply px-2 py-2 bg-transparent w-full block border-solid border border-input rounded-md text-label;
   }
   .form-button{
-    @apply w-[240px] h-[56px] flex items-center justify-center bg-blue text-white rounded-md mx-auto
+    @apply w-[240px] h-[56px] flex items-center justify-center bg-blue text-white rounded-md mx-auto;
+  }
+  .form-error{
+    @apply text-red text-[10px];
   }
 }

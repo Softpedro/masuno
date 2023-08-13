@@ -1,24 +1,24 @@
 import iconForm from '../../assets/images/icon_form.png'
 import captcha from '../../assets/images/captcha.png'
 import adorno from '../../assets/images/adorno_form.svg'
-import { useState } from 'react'
+import { useForm, Controller } from "react-hook-form"
+
 
 const Form = () => {
-
-  const [name, setName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState(false)
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if([name, lastName, email, phone].includes('')){
-      setError(true);
-      console.log('no envia')
-      return;
-    }
-    console.log('envia')
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: ""
+    },
+  })
+  const onSubmit = () => {
+    alert('datos correctos')
   }
   
   return (
@@ -29,45 +29,81 @@ const Form = () => {
         <img src={adorno} alt="" />
       </h5>
       
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className='sm:flex mb-[13px]'>
-          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
+          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px] relative'>
             <label htmlFor="" className='form-label'>Nombres <span className='text-red'>*</span></label>
-            <input
-              type="text"
-              className='form-text text-link focus:border-focus'
-              placeholder="Ingrese sus nombres"
-              onChange={(e) => setName(e.target.value)}
+            <Controller
+              name='firstName'
+              control={control}
+              rules={{ required: true }}
+              render={({ field: { value, onChange } }) => (
+                <input
+                  type="text"
+                  className='form-text text-link focus:border-focus'
+                  placeholder="Ingrese sus nombres"
+                  value={value}
+                  onChange={e => onChange(e.target.value)}
+                />
+              )}
             />
+            {errors.firstName && <p className='form-error'>Este campo es requerido</p>}
           </div>
-          <div className='md:ml-3 flex-1'>
+          <div className='md:ml-3 flex-1 relative'>
             <label htmlFor="" className='form-label'>Apellidos <span className='text-red'>*</span></label>
-            <input
-              type="text"
-              className='form-text text-link focus:border-focus'
-              placeholder="Ingrese sus apellidos"
-              onChange={(e) => setLastName(e.target.value)}
+            <Controller
+              name='lastName'
+              control={control}
+              rules={{ required: true }}
+              render={({ field: { value, onChange } }) => (
+                <input
+                  type="text"
+                  className='form-text text-link focus:border-focus'
+                  placeholder="Ingrese sus apellidos"
+                  value={value}
+                  onChange={e => onChange(e.target.value)}
+                />
+              )}
             />
+            {errors.lastName && <p className='form-error'>Este campo es requerido</p>}
           </div>
         </div>
         <div className='sm:flex mb-[13px]'>
-          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px]'>
+          <div className='md:mr-3 flex-1 md:mb-0 mb-[13px] relative'>
             <label htmlFor="" className='form-label'>Teléfono celular <span className='text-red'>*</span></label>
-            <input
-              type="text"
-              className='form-text text-link focus:border-focus'
-              placeholder="Ingrese su número telefonico"
-              onChange={(e) => setPhone(e.target.value)}
+            <Controller
+              name='phone'
+              control={control}
+              rules={{ required: true }}
+              render={({ field: { value, onChange } }) => (
+                <input
+                  type="text"
+                  className='form-text text-link focus:border-focus'
+                  placeholder="Ingrese su número telefonico"
+                  value={value}
+                  onChange={e => onChange(e.target.value)}
+                />
+              )}
             />
+            {errors.phone && <p className='form-error'>Este campo es requerido</p>}
           </div>
-          <div className='md:ml-3 flex-1'>
+          <div className='md:ml-3 flex-1 relative'>
             <label htmlFor="" className='form-label'>Correo electrónico <span className='text-red'>*</span></label>
-            <input
-              type="text"
-              className='form-text text-link focus:border-focus'
-              placeholder="Ingrese su correo electrónico"
-              onChange={(e) => setEmail(e.target.value)}
+            <Controller
+              name='email'
+              control={control}
+              rules={{ required: true }}
+              render={({ field: { value, onChange } }) => (
+                <input
+                  type="text"
+                  className='form-text text-link focus:border-focus'
+                  placeholder="Ingrese su correo electrónico"
+                  value={value}
+                  onChange={e => onChange(e.target.value)}
+                />
+              )}
             />
+            {errors.email && <p className='form-error'>Este campo es requerido</p>}
           </div>
         </div>
         <div className='sm:flex mb-[13px]'>
