@@ -1,17 +1,18 @@
 import percentaje from '../../assets/images/image_percentaje.png'
 import adorno from '../../assets/images/adorno_discount2.png'
+import icon_scissors from '../../assets/images/scissors.svg'
 
 const Ticket = () => {
   return (
-    <div className="bg-white max-w-[550px] px-[13px] py-[13px] mt-[44px] m-auto">
-      <div className="border-dashed border-2 border-[#003383] px-[20px] py-[15px] rounded-2xl">
+    <div className="bg-white max-w-[550px] px-[13px] py-[13px] mt-[44px] m-auto md:ml-0">
+      <div className="border-dashed border-2 border-[#003383] px-[20px] py-[20px] rounded-2xl">
         <h4 className="text-center text-pink text-[32px] font-semibold">
           Regístrate y obtén
           <img src={adorno} alt=""  className='block m-auto'/>
         </h4>
-        <div className='flex items-center'>
-          <img src={percentaje} alt="" />
-          <div>
+        <div className='md:flex items-center mt-3'>
+          <img src={percentaje} alt="" className='m-auto'/>
+          <div className='text-center md:text-left'>
             <p className='text-blue text-2xl font-semibold'>En tu primera <br /> compra de</p>
             <span className='text-pink font-extrabold text-2xl'>CYBER DAYS</span>
           </div>

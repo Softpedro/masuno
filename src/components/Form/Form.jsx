@@ -137,7 +137,7 @@ const Form = () => {
         </div>
         <button type="submit" className='form-button'>Registrarme</button>
       </form>
-      <p className='mt-6 text-center text-gray text-[14px]'>Aprovecha las mejores ofertas y descuentos en cerdo, congelados, embutidos <span className='text-red'>y mucho más.</span> No te pierdas de nada estos Cyberdays registrándote y obteniendo grandes descuentos exclusivos.</p>
+      <p className='mt-6 text-center text-gray text-[14px]'>Aprovecha las mejores ofertas y descuentos en cerdo, congelados, embutidos <span className='text-red font-extrabold'>y mucho más.</span> No te pierdas de nada estos Cyberdays registrándote y obteniendo grandes descuentos exclusivos.</p>
     </div>
   )
 }
